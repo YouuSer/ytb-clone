@@ -60,6 +60,6 @@ class DatabaseSeeder extends Seeder
         //     'updated_at' => now(),
         // ]);
 
-        \App\Models\Comment::factory(10)->create();
+        // \App\Models\Comment::factory(10)->create();
     }
 }
