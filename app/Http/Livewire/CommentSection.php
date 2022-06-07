@@ -10,12 +10,10 @@ class CommentSection extends Component
 {
     public $video_id;
     public $content;
-    public $user_id;
 
-    public function mount($videoId, $userId)
+    public function mount($videoId)
     {
         $this->video_id = $videoId;
-        $this->user_id = $userId;
     }
 
     public function saveComment()
@@ -25,7 +23,7 @@ class CommentSection extends Component
         ]);
         Comment::create([
             'content' => $this->content,
-            'user_id' => $this->user_id,
+            'user_id' => Auth::user()->id,
             'video_id' => $this->video_id
         ]);
 

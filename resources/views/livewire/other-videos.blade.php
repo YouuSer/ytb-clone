@@ -8,7 +8,7 @@
             </a>
         </div>
     @empty
-        <div>
+        <div class="mt-4">
             Aucune vidéo.
         </div>
     @endforelse

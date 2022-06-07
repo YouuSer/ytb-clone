@@ -2,7 +2,7 @@
 
     <x-slot name="header">
         <div class="flex w-9/12">
-            <h2 class="font-semibold text-xl text-gray-800">
+            <h2 class="font-bold text-3xl text-gray-800 capitalize">
                 {{ __($video->title) }}
             </h2>
             @auth
@@ -28,7 +28,7 @@
         <div class="flex">
             <div class="w-9/12 mr-20">
                 <div>
-                    <video controls poster autoplay src="{{ asset($video->path) }}"></video>
+                    <video width="100%" controls poster autoplay src="{{ asset($video->path) }}"></video>
                     <div class="flex mt-4">
                         <div>
                             <p>{{ $video->views }}
@@ -51,7 +51,7 @@
                 </div>
                 <hr class="my-6">
                 <div>
-                    <livewire:comment-section :videoId="$video->id" :userId="Auth::user()->id" />
+                    <livewire:comment-section :videoId="$video->id" />
                 </div>
             </div>
             <div>

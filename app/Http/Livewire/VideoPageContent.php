@@ -32,9 +32,9 @@ class VideoPageContent extends Component
         $data->save();
     }
 
-    public function mount($id)
+    public function mount($videoId)
     {
-        $this->video = Video::findOrFail($id);
+        $this->video = Video::findOrFail($videoId);
         $this->video->views = $this->video->views + 1;
         $this->video->save();
     }
